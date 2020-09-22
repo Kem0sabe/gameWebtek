@@ -12,7 +12,8 @@ class drawLib {
     //color argument takes in a color
     //added optional argument tranparancy
     this.ctx.fillColor = color;
-    this.ctx.fillRect(x,ygit,width,height);
+
+    this.ctx.fillRect(x-width/2,y-height/2,width,height);
   }
   drawImg(img,x,y,width,height) {
     //draws image in canvas with trivial parameters
@@ -23,12 +24,12 @@ class drawLib {
     this.ctx.drawImage(img,x,y,width,height);
     const img = new Image();
     img.src = "img/pipe.png";
-    img.onload = function() {
+    img.onload = function()
       console.log(img.width,img.height);
 
       d2d.drawImg(img,0,0,img.width/2,img.height/2);
     }*/
-    this.drawRect(x+width/2,y+height,5,5)
+    //this.drawRect(x+width/2,y+height,5,5)
   }
   clear() {
     this.ctx.clearRect(0,0,this.canvas.width,this.canvas.height)
