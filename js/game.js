@@ -9,6 +9,14 @@ class Game {
     this.fps = 10; // setting frames per second
     this.running = false; //handy variable for statrting and stopping the render function
     this.start(); // starting TODO: remove this
+    this.mouse = { //object for finding x and y values of the client mouse relative to canvas
+      x: function() {
+        return window.event.clientX - this.canvas.offsetTop;
+      }
+      y: function() {
+        return window.event.clientY - this.canvas.offsetLeft;
+      }
+    }
   }
   render() {
 

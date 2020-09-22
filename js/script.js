@@ -3,17 +3,18 @@
 window.onload = function() {
 
 
-  const canvas = document.getElementsByClassName("gameCanvas")[0]; // there is only one canvas
-  //canvas.height = window.innerHeight/5;
+  const canvas = document.getElementById("gameCanvas"); // there is only one canvas
+  canvas.width = 600;
+  canvas.height = 600;
+  
 
   //d2d = draw 2d, object that we use for drawing
 
-  const d2d = new drawLib(canvas);
+
   //d2d.drawRect(50,50,50,50,"grey");
-  d2d.drawRect(0,0,50,50,"black");
-
-
-  //const game = new Game(canvas);
+  //d2d.drawRect(50,50,50,50,"black");
+  //let c = canvas.getContext("2d");
+  //c.fillRect(0,0,100,100)
 
 
 }
