@@ -1,6 +1,5 @@
-.gameCanvas {
-  width: 70vh;
-  height: 90vh;
+#gameCanvas {
+  
   background-color: #C0FFEE;
   border: 2px solid black;
 
