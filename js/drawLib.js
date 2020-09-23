@@ -1,6 +1,8 @@
 "use  strict"
 //This is a library for drawing stuff in the canvas
 //Initialise by passing in the canvas
+
+//TODO: maybe make color spesification oblig idk
 class drawLib {
   constructor(canvas) {
     this.canvas = canvas;
@@ -11,7 +13,7 @@ class drawLib {
     //height and width are the dimmentions of the rectangle
     //color argument takes in a color
     //added optional argument tranparancy
-    this.ctx.fillColor = color;
+    this.ctx.fillStyle = color;
 
     this.ctx.fillRect(x-width/2,y-height/2,width,height);
   }
@@ -30,6 +32,13 @@ class drawLib {
       d2d.drawImg(img,0,0,img.width/2,img.height/2);
     }*/
     //this.drawRect(x+width/2,y+height,5,5)
+  }
+  drawCircle(x,y,radius,color = "black") {
+    this.ctx.fillStyle = color;
+    this.ctx.beginPath();
+    this.ctx.arc(x,y,radius,0,2*Math.PI);
+    this.ctx.fill();
+    this.ctx.closePath();
   }
   clear() {
     this.ctx.clearRect(0,0,this.canvas.width,this.canvas.height)
